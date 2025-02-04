@@ -12,4 +12,8 @@ class UserRepositoryImpl implements UserRepository {
   Future<String> login(String email, String password) {
     return dataSource.login(email, password);
   }
+  @override
+  Future<String> signup(String firstName, String lastName, String email, String password) {
+    return dataSource.signup(firstName, lastName, email, password);
+  }
 }
