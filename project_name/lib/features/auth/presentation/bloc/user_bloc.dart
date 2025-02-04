@@ -16,5 +16,15 @@ class UserBloc extends Bloc<UserEvent, UserState> {
         emit(UserFailure(e.toString()));
       }
     });
+    on<UserSignupEvent>((event, emit) async {
+      emit(UserLoading());
+      try {
+        final response = await repository.signup(
+            event.firstName, event.lastName, event.email, event.password);
+        emit(UserSuccess(response));
+      } catch (e) {
+        emit(UserFailure(e.toString()));
+      }
+    });
   }
 }
