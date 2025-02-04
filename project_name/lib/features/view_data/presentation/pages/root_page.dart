@@ -15,7 +15,6 @@ class _RootPageState extends State<RootPage> {
   // The different pages will be listed here
   final List<Widget> _children = [
     HomePage(),
-    HistoryPage(),
     ProfilePage(),
   ];
 
@@ -62,19 +61,6 @@ class _RootPageState extends State<RootPage> {
                 size: 24,
               ),
               label: 'Home',
-            ),
-            NavigationDestination(
-              selectedIcon: Icon(
-                Icons.store,
-                color: Colors.blue,
-                size: 25,
-              ),
-              icon: Icon(
-                Icons.store,
-                color: Colors.black,
-                size: 22,
-              ),
-              label: 'Orders',
             ),
             NavigationDestination(
               selectedIcon: Icon(
