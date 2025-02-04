@@ -8,3 +8,4 @@ abstract class ScheduleEvent extends Equatable {
 }
 
 class FetchSchedulesEvent extends ScheduleEvent {}
+class FetchUserDataEvent extends ScheduleEvent {}
