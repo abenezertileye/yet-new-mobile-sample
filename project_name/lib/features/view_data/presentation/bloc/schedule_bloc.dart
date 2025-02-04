@@ -16,9 +16,14 @@ class ScheduleBloc extends Bloc<ScheduleEvent, ScheduleState> {
         emit(ScheduleError(message: e.toString()));
       }
     });
+    on<FetchUserDataEvent>((event, emit) async {
+      emit(ScheduleLoading());
+      try {
+        final schedules = await repository.getSchedules();
+        emit(ScheduleLoaded(schedules: schedules));
+      } catch (e) {
+        emit(ScheduleError(message: e.toString()));
+      }
+    });
   }
 }
-
-
-
-
