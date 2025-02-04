@@ -18,11 +18,13 @@ class MyApp extends StatelessWidget {
     return MultiRepositoryProvider(
       providers: [
         RepositoryProvider<UserRepository>(
-          create: (context) => UserRepositoryImpl(UserDataSource(baseUrl: 'http://10.5.224.233:3000')),
+          create: (context) => UserRepositoryImpl(
+              UserDataSource(baseUrl: 'http://192.168.8.137:3000')),
         ),
         RepositoryProvider<ScheduleRepository>(
           create: (context) => ScheduleRepositoryImpl(
-            dataSource: ScheduleDataSource(baseUrl: 'http://10.5.224.233:3000'),
+            dataSource:
+                ScheduleDataSource(baseUrl: 'http://192.168.8.137:3000'),
           ),
         ),
       ],
