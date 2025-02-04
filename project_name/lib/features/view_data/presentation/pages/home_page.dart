@@ -5,7 +5,7 @@ import 'package:project_name/features/view_data/data/repository/schedule_reposit
 import 'package:project_name/features/view_data/presentation/bloc/schedule_bloc.dart';
 import 'package:project_name/features/view_data/presentation/bloc/schedule_event.dart';
 import 'package:project_name/features/view_data/presentation/bloc/schedule_state.dart';
-import 'package:project_name/features/view_data/presentation/pages/widgets/schedule_card.dart';
+import 'package:project_name/features/view_data/presentation/widgets/schedule_card.dart';
 
 class HomePage extends StatelessWidget {
   @override
