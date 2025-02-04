@@ -11,4 +11,8 @@ class ScheduleRepositoryImpl implements ScheduleRepository {
   Future<List<Schedule>> getSchedules() {
     return dataSource.fetchSchedules();
   }
+  @override
+  Future<Map<String, dynamic>> getUserData() {
+    return dataSource.fetchUserData();
+  }
 }
